@@ -44,7 +44,7 @@
                     <div class="tab-titles">
                         <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
                         <div class="tab-links" onclick="opentab('experience')">Experience</div>
-                        <div class="tab-link" onclick="opentab('education')">Education</div>
+                        <div class="tab-links" onclick="opentab('education')">Education</div>
                     </div>
 
                     <div class="tab-contents active-tab" id="skills">
@@ -56,13 +56,13 @@
                     <div class="tab-contents" id="experience">
                         <ul>
                             <li><span>2023 - present</span><br>Software Engineer at ThinkCode LLC.</li>
-                            <li><span>2022-2023</span><br>Sound Engineer at Astro Studios.</li>
+                            <li><span>2022 - 2023</span><br>Sound Engineer at Astro Studios.</li>
                         </ul>
                     </div>
                     <div class="tab-contents" id="education">
                         <ul>
-                            <li><span>2023 - Current</span><br>Moringa School</li>
-                            <li><span>2019 - 2022</span><br>University Of Nairobi</li>
+                            <li><span>2023 - Current</span><br>Moringa School<br>Diploma in Software Engineering</li>
+                            <li><span>2019 - 2022</span><br>University Of Nairobi<br>Bachelor of Science (Applied Mathematics)</li>
                         </ul>
                     </div>
                 </div>
@@ -173,10 +173,10 @@
             tablink.classList.remove("active-link");
         }
         for(tabcontent of tabcontents) {
-            tabcontent.classList.remove("active-link");
+            tabcontent.classList.remove("active-tab");
         }
         event.currentTarget.classList.add("active-link");
-        document.getElementById(tabname).classList.add('active-tab')
+        document.getElementById(tabname).classList.add("active-tab")
     }
 </script>
 
@@ -202,7 +202,7 @@
       e.preventDefault()
       fetch(scriptURL, { method: 'POST', body: new FormData(form)})
         .then(response => {
-            msg.innerHTML = "Message sent successfully"
+            msg.innerHTML = "Message sent successfully!"
             setTimeout(function(){
                 msg.innerHTML = ""
             },5000)

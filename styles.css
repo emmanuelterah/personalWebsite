@@ -11,7 +11,7 @@ html {
 
 body {
     background: #080808;
-    color: beige;
+    color: #f5f5dc;
 }
 
 #header {
@@ -48,9 +48,10 @@ nav ul li a {
     color: #25d6d6;
     text-decoration: none;
     font-size: 18px;
+    position: relative;
 }
 
-nav ul li a:hover::after {
+nav ul li a::after {
     content: '';
     width: 0;
     height: 3px;
@@ -87,6 +88,7 @@ nav ul li a:hover::after {
 .row {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .about-col-1 {
@@ -125,7 +127,7 @@ nav ul li a:hover::after {
     content: '';
     width: 0;
     height: 3px;
-    background: #25d6d6;
+    background: #ff004f;
     position: absolute;
     left: 0;
     bottom: -8px;
@@ -347,7 +349,7 @@ form input, form textarea {
     border-radius: 6px;
 }
 
-form btn2 {
+form .btn2 {
     padding: 14px 60px;
     font-size: 18px;
     margin-top: 20px;
@@ -369,7 +371,7 @@ form btn2 {
 
 /*<!---------css for small screens ------>*/
 
-nav .fas{
+nav .fa-solid {
     display: none;
 }
 
@@ -386,7 +388,7 @@ nav .fas{
         font-size: 30px;
     }
 
-    nav .fas {
+    nav .fa-solid {
         display: block;
         font-size: 25px;
     }
