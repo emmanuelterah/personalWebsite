@@ -4,7 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal Website</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/270cab7251.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div id="header">
@@ -28,11 +32,83 @@
     <div id="about">
         <div class="container">
             <div class="row">
-                <div class="about-col-1"></div>
-                <div class="about-col-2"></div>
+                <div class="about-col-1">
+                    <img src="images/IMG_20220328_203355.jpg" alt="My fun picture">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel a necessitatibus ipsam non similique quaerat debitis perferendis illo nam molestias dolorem ex ipsa pariatur amet accusantium nesciunt eum aperiam, deleniti reiciendis quo</p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <div class="tab-links" onclick="opentab('experience')">Experience</div>
+                        <div class="tab-link" onclick="opentab('education')">Education</div>
+                    </div>
+
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Software Engineer</span><br>Web App Development</li>
+                            <li><span>Mathematician</span><br>Design mathematical models<br>that reduce code bulk.</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>2023 - present</span><br>Software Engineer at ThinkCode LLC.</li>
+                            <li><span>2022-2023</span><br>Sound Engineer at Astro Studios.</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2023 - Current</span><br>Moringa School</li>
+                            <li><span>2019 - 2022</span><br>University Of Nairobi</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 
+    <div id="Services">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-regular fa-code"></i>
+                    <h2>Web Development</h2>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum libero officiis itaque consequatur quia molestiae repellendus sit soluta labore alias ex, quas nobis perferendis.</p>
+                    <a href="#">learn more</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-crop-simple"></i>
+                    <h2>Mathematical Modeling</h2>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum libero officiis itaque consequatur quia molestiae repellendus sit soluta labore alias ex, quas nobis perferendis.</p>
+                    <a href="#">learn more</a>
+                </div>
+                <div>
+                    <i class="fa-brands fa-app-store"></i>
+                    <h2>Mobile App Development</h2>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum libero officiis itaque consequatur quia molestiae repellendus sit soluta labore alias ex, quas nobis perferendis.</p>
+                    <a href="#">learn more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+/*Comments*/
+
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    function opentab(tabname) {
+        for(tablink of tablinks) {
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents) {
+            tabcontent.classList.remove("active-link");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add('active-tab')
+    }
+</script>
 </body>
 </html>
