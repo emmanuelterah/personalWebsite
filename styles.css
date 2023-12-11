@@ -55,7 +55,7 @@ nav ul li a::after {
     content: '';
     width: 0;
     height: 3px;
-    background: #ff004f;
+    background: #fff;
     position: absolute;
     left: 0;
     bottom: -6px;
@@ -93,11 +93,13 @@ nav ul li a:hover::after {
 
 .about-col-1 {
     flex-basis: 35%;
+    overflow: hidden;
 }
 
 .about-col-1 img {
     width: 100%;
     border-radius: 15px;
+    transform: scale(1.1);
 }
 
 .about-col-2 {
@@ -127,7 +129,7 @@ nav ul li a:hover::after {
     content: '';
     width: 0;
     height: 3px;
-    background: #ff004f;
+    background: #25d6d6;
     position: absolute;
     left: 0;
     bottom: -8px;
@@ -144,7 +146,7 @@ nav ul li a:hover::after {
 }
 
 .tab-contents ul li span {
-    color: #ff004f;
+    color: #25d6d6;
     font-size: 14px;
 }
 
