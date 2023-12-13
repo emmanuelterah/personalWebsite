@@ -287,7 +287,7 @@ nav ul li a:hover::after {
 }
 
 .btn:hover {
-    background: #25d6d6;
+    background: hsl(180, 71%, 49%, 0.7);
     color: black;
 }
 
@@ -331,7 +331,13 @@ nav ul li a:hover::after {
 
 .btn.btn2 {
     display: inline-block;
-    background-color: #25d6d6;
+    background-color: hsl(180, 71%, 49%,0.45);
+    transition: background 0.4s;
+}
+
+.btn.btn2:hover {
+    display: inline-block;
+    background: hsl(180, 71%, 49%,2.7);
 }
 
 .contact-right {
